@@ -1,0 +1,55 @@
+body {
+	font-family: 'Open Sans',Helvetica,Arial,Lucida,sans-serif !important;
+}
+
+#title {
+	color: #0095bf;
+	font-size: 5rem;
+}
+.about {
+	margin-top: 60px;
+	background-color: #0095bf;
+	color: #fff;
+	padding: 20px;
+}
+
+.about a {
+	color: #2bf66f;
+	text-decoration: none;
+}
+
+.about a:hover {
+	color: #073f19;
+	text-decoration: none;
+}
+
+.poziadavky {
+	margin-top: 30px;
+}
+
+.medzera {
+	margin-top: 30px;
+}
+
+li {
+	margin-top: 30px;
+}
+
+.code {
+	background-color: #e1e1e1;
+	color: #d14;
+	line-height: 2 !important;
+}
+
+.code-2 {
+	background-color: #e1e1e1;
+	color: #d14;
+	line-height: 2 !important;
+	padding: 5px;
+}
+
+.blue-font {
+	color: #0095bf;
+	margin-top: 50px;	
+	margin-bottom: 50px;
+}

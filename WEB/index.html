@@ -1,0 +1,71 @@
+<html><head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, shrink-to-fit=no">
+	    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Sans+Narrow">
+	    <link rel="stylesheet" type="text/css" href="style.css">
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	    <title>WORKSHOP ICINGA- MAREK PASTIERIK</title>
+
+	<body>
+
+			<section>
+				<div class="container">
+					<h1 id="title" class="text-center">Icinga2</h1>
+				    <h1 class="text-center">WORKSHOP</h1>
+					<h2 class="text-center">Marek Jaroš, Gabriela Karasková, Marek Pastierik</h2>
+				</div>
+
+				<div class="about">
+					<div class="container">
+						<h1><b>Začíname</b></h1>
+						<ul>
+							<li><h3>stiahnutie skušobného prostredia Icinga2 v <a href="https://www.docker.com/">Dockeri</a></h3><span> Pre pokračovanie v tomto "workshope" je tento krok nevyhnutný!</span>
+								<br/>
+								<div class="medzera">
+								</div>
+								<h5 style="margin-top:30px; display: inline;">V prvom rade je potrebné si sťiahnúť </h5><h3 style="margin-left: 5px; display: inline;"><a href="/workshop.zip" download="prostredie"> skušobné prostredie</a></h3><h5 style="display: inline;">, v ktorom Vám budeme vysvetlovať funckionalitu Icingy.</h5>
+								<span>(Viac informácií nájdete v repozitári gitlabu ics muni.)</span>
+
+								<h5 class="poziadavky">Požiadavky: </h5>
+							    <span>Docker compose (version 3)</span>
+							    <br/>
+							    <span>BASH</span>
+							</li>
+
+							<li>
+								<h3>nastavenie prostredia</h3>
+								<div class="medzera">
+								</div>
+								<h5 style="display: inline;">V priloženom súbore sa nachádza skript s názvom <h3 style="font-size: 1.5rem; color: #2bf66f; display: inline;">magic</h3><h5 style="display: inline;">. Tento súbor by mal vygenerovať kontajner, v ktorom beží inštancia Icingy a je teda potrebné ho spustiť pod superuživateľom.</h5>
+								<br/>
+								<p style="display: block; margin-top: 15px; font-weight: 700;" class="code-2">sudo bash magic</p>
+							</li>
+					</div>
+				</div>
+
+
+				<div class="container blue-font">
+					<h1><b>Overenie funkčnosti prostredia</b></h1>
+					<span>Po správnom vykonaní predchádzajúcich krokoch by Vam mali fungovať všetky nasledujúce testy</span>
+					<ul>
+						<li>
+							<h5 style="display: inline;">Skript <b>magic </b>vypísal na štandartný výstup <b>"WELCOME TO THE WORKSHOP"</b></h5>
+						</li>
+
+						<li>
+							<h5>Po spustení príkazu <span class="code">docker ps </span>existuje kontainer s názvom icinga2</h5>
+						</li>
+
+						<li>
+							<h5>API icingy funguje</h5>
+							<p style="display: block; margin-top: 15px; font-weight: 700;" class="code-2">curl -k -s -u workshop:workshop 'https://localhost:5665/v1/'</p>
+						</li>
+
+					</ul>
+				</div>
+			</section>
+	</body>
+</html>

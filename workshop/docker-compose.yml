@@ -1,0 +1,12 @@
+version: '3'
+services:
+    icinga2:
+        ports:
+            - "80:80"
+            - "443:443"
+            - "5665:5665"
+        volumes:
+            - ./icinga/etc:/etc/icinga2
+            - ./icinga/data:/var/lib/icinga2
+        image: jordan/icinga2
+        container_name: icinga2

@@ -1,3 +1,10 @@
 #!/bin/bash
-mkdir -p ./icinga/{etc, data}
-sudo docker-compose up -d  && echo -e "object ApiUser \"workshop\" {\n  password = \"workshop\"\n  permissions = [ \"*\" ]\n}"  > ./icinga/etc/conf.d/workshop.conf && docker exec -d icinga2 service icinga2 restart
+mkdir -p icinga/{etc,data} && 
+sudo docker-compose up -d > /dev/null
+while [ true ]
+  do
+     if [ -d icinga/etc/conf.d ]; then
+         break
+     fi
+done
+echo -e "object ApiUser \"workshop\" {\n  password = \"workshop\"\n  permissions = [ \"*\" ]\n}"  > icinga/etc/conf.d/workshop.conf && docker exec -d icinga2 service icinga2 restart && echo "WELCOME TO THE WORKSHOP"

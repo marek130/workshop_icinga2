@@ -7,4 +7,4 @@ while [ true ]
          break
      fi
 done
-echo -e "object ApiUser \"workshop\" {\n  password = \"workshop\"\n  permissions = [ \"*\" ]\n}"  > icinga/etc/conf.d/workshop.conf && docker exec -d icinga2 service icinga2 restart && echo "WELCOME TO THE WORKSHOP"
+echo -e "object ApiUser \"workshop\" {\n  password = \"workshop\"\n  permissions = [ \"*\" ]\n}"  > icinga/etc/conf.d/workshop.conf && sleep 3 && docker exec -d icinga2 service icinga2 restart && echo "WELCOME TO THE WORKSHOP"
